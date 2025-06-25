@@ -12,7 +12,10 @@
         "publish:minor": "pnpm version minor && pnpm publish",
         "publish:major": "pnpm version major && pnpm publish",
         "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
-        "publish:github": "npm publish --registry=https://npm.pkg.github.com/"
+        "publish:github": "npm publish --registry=https://npm.pkg.github.com/",
+        "publish:npm:patch": "pnpm version patch && pnpm run publish:npm",
+        "publish:npm:minor": "pnpm version minor && pnpm run publish:npm",
+        "publish:npm:major": "pnpm version major && pnpm run publish:npm"
     },
     "author": "Isaac Longoria",
     "license": "ISC",
@@ -50,9 +53,5 @@
     "files": [
         "dist"
     ],
-    "types": "dist/index.d.ts",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/IkeLongo",
-        "access": "public"
-    }
+    "types": "dist/index.d.ts"
 }
