@@ -12,11 +12,17 @@ const DEFAULT_LOGO = "/packages/navbar/assets/logo-rivercity-creatives-horizonta
 export default function MobileMenu({
   links,
   logoSrc = DEFAULT_LOGO,
-  color = "#FFFFFF"
+  color = "#FFFFFF",
+  showBookingButton = true,
+  bookingHref = "/booking",
+  bookingText = "Book a Call"
 }: {
   links: NavLink[];
   logoSrc?: string;
   color?: string;
+  showBookingButton?: boolean;
+  bookingHref?: string;
+  bookingText?: string;
 }) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const playerRef = useRef<AnimationItem | null>(null);
@@ -77,13 +83,15 @@ export default function MobileMenu({
           links={links}
           onClick={toggleMenu}
         />
-        <Button
-          onPress={toggleMenu}  // Close the menu when the button is clicked
-          className="w-full h-[45px] font-maven-pro text-white text-[14px] font-bold rounded-[20px] bg-green-500 mt-4">
-          <Link href="/booking" className="w-full h-full flex items-center justify-center">
-            Book a Call
-          </Link>
-        </Button>
+        {showBookingButton && (
+          <Button
+            onPress={toggleMenu}  // Close the menu when the button is clicked
+            className="w-full h-[45px] font-maven-pro text-white text-[14px] font-bold rounded-[20px] bg-green-500 mt-4">
+            <Link href={bookingHref} className="w-full h-full flex items-center justify-center">
+              {bookingText}
+            </Link>
+          </Button>
+        )}
       </div>
     </div>)
   );
