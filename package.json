@@ -1,17 +1,20 @@
 {
-    "name": "rivercity-ui-library",
+    "name": "@IkeLongo/react-component-library",
     "version": "0.0.1",
     "description": "A simple template for a custom React component library",
     "scripts": {
         "build": "pnpm run build:rollup && pnpm run build:types",
         "build:rollup": "rollup -c",
         "build:types": "tsc --emitDeclarationOnly --outDir dist/types",
-        "rollup": "rollup -c"
+        "rollup": "rollup -c",
+        "prepublishOnly": "pnpm run build",
+        "publish:patch": "pnpm version patch && pnpm publish",
+        "publish:minor": "pnpm version minor && pnpm publish",
+        "publish:major": "pnpm version major && pnpm publish"
     },
     "author": "Isaac Longoria",
     "license": "ISC",
     "type": "module",
-    "private": true,
     "workspaces": [
         "packages/*",
         "my-nextui-app"
@@ -45,5 +48,8 @@
     "files": [
         "dist"
     ],
-    "types": "dist/index.d.ts"
+    "types": "dist/index.d.ts",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/IkeLongo"
+    }
 }
