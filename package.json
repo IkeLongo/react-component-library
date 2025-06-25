@@ -1,5 +1,5 @@
 {
-    "name": "@IkeLongo/react-component-library",
+    "name": "@ikelongo/react-component-library",
     "version": "0.0.2",
     "description": "A simple template for a custom React component library",
     "scripts": {
@@ -10,7 +10,9 @@
         "prepublishOnly": "pnpm run build",
         "publish:patch": "pnpm version patch && pnpm publish",
         "publish:minor": "pnpm version minor && pnpm publish",
-        "publish:major": "pnpm version major && pnpm publish"
+        "publish:major": "pnpm version major && pnpm publish",
+        "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
+        "publish:github": "npm publish --registry=https://npm.pkg.github.com/"
     },
     "author": "Isaac Longoria",
     "license": "ISC",
@@ -50,6 +52,7 @@
     ],
     "types": "dist/index.d.ts",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/IkeLongo"
+        "registry": "https://npm.pkg.github.com/IkeLongo",
+        "access": "public"
     }
 }
