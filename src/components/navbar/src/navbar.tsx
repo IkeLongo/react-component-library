@@ -23,6 +23,7 @@ export type NavbarProps = {
   loginHref?: string;
   bookingText?: string;
   loginText?: string;
+  backgroundColor?: string;
 };
 
 export default function Navbar({ 
@@ -33,7 +34,8 @@ export default function Navbar({
   bookingHref = "/booking",
   loginHref = "/login",
   bookingText = "Book a Call",
-  loginText = "Login"
+  loginText = "Login",
+  backgroundColor = "bg-navy-500"
 }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentHref, setCurrentHref] = useState('/');
@@ -53,10 +55,11 @@ export default function Navbar({
           showBookingButton={showBookingButton}
           bookingHref={bookingHref}
           bookingText={bookingText}
+          backgroundColor={backgroundColor}
         />
         <div className="flex items-center justify-center">
           <div className='hidden md:w-[800px] md:flex md:flex-col md:pt-[30px] md:justify-center md:gap-[10px]'>
-            <div className='flex py-[13px] px-[20px] justify-between items-center self-stretch rounded-[30px] border-[1px] bg-alice-blue-200/75 backdrop-blur-[3.5px]'>
+            <div className={`flex py-[13px] px-[20px] justify-between items-center self-stretch rounded-[30px] border-[1px] ${backgroundColor}/75 backdrop-blur-[3.5px]`}>
               <Link href="/" onClick={handleLogoClick}>
                 <Image
                   src={resolvedLogoSrc}

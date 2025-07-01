@@ -38,6 +38,7 @@ function App() {
       loginText="Sign In"
       bookingHref="/signup"
       loginHref="/signin"
+      backgroundColor="bg-blue-600"
     />
   );
 }
@@ -65,6 +66,22 @@ function App() {
 }
 ```
 
+### Custom Background Color
+
+```tsx
+import { Navbar } from '@IkeLongo/react-component-library';
+
+function App() {
+  return (
+    <Navbar 
+      logoSrc="/logo.png"
+      backgroundColor="bg-purple-600"
+      bookingText="Join Now"
+    />
+  );
+}
+```
+
 ## Props
 
 | Prop | Type | Default | Description |
@@ -77,6 +94,7 @@ function App() {
 | `loginHref` | `string` | `"/login"` | URL for the login button |
 | `bookingText` | `string` | `"Book a Call"` | Text for the booking button |
 | `loginText` | `string` | `"Login"` | Text for the login button |
+| `backgroundColor` | `string` | `"bg-navy-500"` | Tailwind CSS background color class |
 
 ## NavLink Type
 

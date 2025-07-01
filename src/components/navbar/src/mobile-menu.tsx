@@ -15,7 +15,8 @@ export default function MobileMenu({
   color = "#FFFFFF",
   showBookingButton = true,
   bookingHref = "/booking",
-  bookingText = "Book a Call"
+  bookingText = "Book a Call",
+  backgroundColor = "bg-navy-500"
 }: {
   links: NavLink[];
   logoSrc?: string;
@@ -23,6 +24,7 @@ export default function MobileMenu({
   showBookingButton?: boolean;
   bookingHref?: string;
   bookingText?: string;
+  backgroundColor?: string;
 }) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const playerRef = useRef<AnimationItem | null>(null);
@@ -60,7 +62,7 @@ export default function MobileMenu({
 
   return (
     (<div className='w-full align-center md:hidden'>
-      <div className='absolute z-20 w-full bg-navy-500 border-x-[1px] border-blue-800'>
+      <div className={`absolute z-20 w-full ${backgroundColor} border-x-[1px] border-blue-800`}>
         <div className='flex flex-row justify-between h-[65px] px-6 pt-[10px] items-center'>
           <Link href="/" onClick={handleLogoClick}>
             <Image
@@ -78,7 +80,7 @@ export default function MobileMenu({
           </div>
         </div>
       </div>
-      <div className={`absolute top-[20px] w-full h-[300px] flex flex-col justify-between px-6 py-6 bg-navy-500 border-[1px] border-t-0 border-blue-800 rounded-b-[13px] drop-shadow-[0_14px_16.2px_rgba(0,0,0,0.25)] backdrop-blur-[7px] transition-transform duration-500 ease-in-out z-10 ${menuOpen ? 'translate-y-8' : '-translate-y-[240px]'}`}>
+      <div className={`absolute top-[20px] w-full h-[300px] flex flex-col justify-between px-6 py-6 ${backgroundColor} border-[1px] border-t-0 border-blue-800 rounded-b-[13px] drop-shadow-[0_14px_16.2px_rgba(0,0,0,0.25)] backdrop-blur-[7px] transition-transform duration-500 ease-in-out z-10 ${menuOpen ? 'translate-y-8' : '-translate-y-[240px]'}`}>
         <NavLinks
           links={links}
           onClick={toggleMenu}
