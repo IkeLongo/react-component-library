@@ -84,7 +84,7 @@ export default function Footer({
                   {phoneNumber}
                 </p>
               </div>
-              <div className="flex items-center gap-3 lg:gap-2">
+              <div className="flex items-start gap-3 lg:gap-2">
                 <Image
                   src="/location.svg"
                   alt="Location Icon"
@@ -95,9 +95,14 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <p className="text-sm lg:text-[14px]">
-                  {location}
-                </p>
+                <div className='flex flex-col gap-1'>
+                  <p className="text-sm lg:text-[14px]">
+                    {location}
+                  </p>
+                  <p className="text-sm lg:text-[14px]">
+                    (Located across Helotes Elementary)
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -106,57 +111,44 @@ export default function Footer({
               Follow Us
             </p>
             <div className="flex items-center self-stretch gap-[32px] md:hidden lg:flex">
-              <Image
-                src="/facebook.svg"
-                alt="Facebook Icon"
-                width={30}
-                height={30}
-                className="cursor-pointer"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
-              <Image
-                src="/twitter.svg"
-                alt="Twitter Icon"
-                width={30}
-                height={30}
-                className="cursor-pointer"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
-              <Image
-                src="/instagram.svg"
-                alt="Instagram Icon"
-                width={30}
-                height={30}
-                className="cursor-pointer"
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
-              {/* <Image
-                src="/messenger.svg"
-                alt="Messenger Icon"
-                width={30}
-                height={30}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} />
-              <Image
-                src="/figma.svg"
-                alt="Figma Icon"
-                width={30}
-                height={30}
-                style={{
-                  maxWidth: "100%",
-                  height: "auto"
-                }} /> */}
-            </div>
-            <div className="hidden md:flex lg:hidden md:items-start md:self-stretch md:gap-[32px] md:flex-col md:justify-start">
-              <div className='flex gap-8 justify-start'>
+              <Link href="https://www.instagram.com/strengthstrategist/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/instagram.svg"
+                  alt="Instagram Icon"
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }}
+                />
+              </Link>
+              <Link href="https://www.tiktok.com/@strength_strategist" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/tik-toc.svg"
+                  alt="Tik Toc Icon"
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
+              </Link>
+              <Link href="https://www.linkedin.com/in/cade-collenback-6a18b4241/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/linked-in.svg"
+                  alt="LinkedIn Icon"
+                  width={30}
+                  height={30}
+                  className="cursor-pointer"
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto"
+                  }} />
+              </Link>
+              <Link href="https://www.facebook.com/people/Cade-Collenback/100094213129611/#" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/facebook.svg"
                   alt="Facebook Icon"
@@ -167,38 +159,62 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <Image
-                  src="/twitter.svg"
-                  alt="Twitter Icon"
-                  width={30}
-                  height={30}
-                  className="cursor-pointer"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <Image
-                  src="/instagram.svg"
-                  alt="Instagram Icon"
-                  width={30}
-                  height={30}
-                  className="cursor-pointer"
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+              </Link>
+            </div>
+            <div className="hidden md:flex lg:hidden md:items-start md:self-stretch md:gap-[32px] md:flex-col md:justify-start">
+              <div className='flex gap-8 justify-start'>
+                <Link href="https://www.instagram.com/strengthstrategist/" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/instagram.svg"
+                    alt="Instagram Icon"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }}
+                  />
+                </Link>
+                <Link href="https://www.tiktok.com/@strength_strategist" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/tik-toc.svg"
+                    alt="Tik Toc Icon"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
+                </Link>
+                <Link href="https://www.linkedin.com/in/cade-collenback-6a18b4241/" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/linked-in.svg"
+                    alt="LinkedIn Icon"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
+                </Link>
               </div>
-              {/* <div className='flex gap-8 justify-start'>
-                <Image
-                  src="/messenger.svg"
-                  alt="Messenger Icon"
-                  width={30}
-                  height={30}
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
-                <Image
+              <div className='flex gap-8 justify-start'>
+                <Link href="https://www.facebook.com/people/Cade-Collenback/100094213129611/#" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/facebook.svg"
+                    alt="Facebook Icon"
+                    width={30}
+                    height={30}
+                    className="cursor-pointer"
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
+                </Link>
+                {/* <Image
                   src="/figma.svg"
                   alt="Figma Icon"
                   width={30}
@@ -206,8 +222,8 @@ export default function Footer({
                   style={{
                     maxWidth: "100%",
                     height: "auto"
-                  }} />
-              </div> */}
+                  }} /> */}
+              </div>
             </div>
           </div>
         </div>
