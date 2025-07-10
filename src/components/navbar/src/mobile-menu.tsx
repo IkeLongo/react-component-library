@@ -16,7 +16,7 @@ export default function MobileMenu({
   showBookingButton = true,
   bookingHref = "/booking",
   bookingText = "Book a Call",
-  backgroundColor = "bg-navy-500"
+  backgroundColor = "bg-grey-700"
 }: {
   links: NavLink[];
   logoSrc?: string;

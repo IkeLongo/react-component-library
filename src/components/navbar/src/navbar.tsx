@@ -4,6 +4,7 @@ import {Button, ButtonGroup} from "@heroui/button";
 import Link from 'next/link';
 import NavLinks, { NavLink } from './nav-links';
 import MobileMenu from './mobile-menu';
+import '../../../../../../app/globals.css'; // Ensure global styles are imported
 
 const DEFAULT_LOGO = "/packages/navbar/assets/logo-rivercity-creatives-horizontal-green-white.png";
 
@@ -35,7 +36,7 @@ export default function Navbar({
   loginHref = "/login",
   bookingText = "Book a Call",
   loginText = "Login",
-  backgroundColor = "bg-navy-500"
+  backgroundColor = "bg-grey-700"
 }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentHref, setCurrentHref] = useState('/');
@@ -59,7 +60,7 @@ export default function Navbar({
         />
         <div className="flex items-center justify-center">
           <div className='hidden md:w-[800px] md:flex md:flex-col md:pt-[30px] md:justify-center md:gap-[10px]'>
-            <div className={`flex py-[13px] px-[20px] justify-between items-center self-stretch rounded-[30px] border-[1px] ${backgroundColor}/75 backdrop-blur-[3.5px]`}>
+            <div className={`flex py-[13px] px-[20px] justify-between items-center self-stretch rounded-[30px] border-[1px] bg-grey-650 ${backgroundColor} backdrop-blur-[3.5px]`}>
               <Link href="/" onClick={handleLogoClick}>
                 <Image
                   src={resolvedLogoSrc}

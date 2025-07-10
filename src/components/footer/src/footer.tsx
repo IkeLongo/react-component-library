@@ -19,25 +19,41 @@ export default function Footer({
 }: FooterProps) {
 
   return (
-    (<div className="relative w-full h-auto shrink-0 px-8 pb-1 md:py-10 md:pb-14 z-0 lg:pt-10 bg-navy-500">
-      <div className="flex w-full inline-flex justify-between items-center md:justify-center">
-        <Link href="/" passHref>
+    (<div className="relative w-full h-auto shrink-0 px-8 pb-1 md:py-10 md:pb-8 z-0 lg:pt-10">
+      <div className="flex w-full inline-flex justify-between items-center gap-[24px]">
+        <Link href="/" passHref className="md:w-1/2 lg:w-full lg:flex lg:justify-center">
           <Image
             src={logoSrc}
             alt="Company Logo"
             width={200}
             height={100}
-            className="cursor-pointer w-[150px] lg:w-[200px] h-auto md:pb-6"
+            className="cursor-pointer w-[150px] lg:w-[200px] h-auto"
           />
         </Link>
+        <div className="hidden md:block md:w-1/2 lg:hidden">
+          <p>
+            Cowards  Never Start <br />
+            The Weak Never Finish <br />
+            The Strong Never Quit <br />
+            Start YOUR jouney today!
+          </p>
+        </div>
       </div>
       <div className="flex flex-col gap-[46px] md:flex-row md:justify-between md:pb-10 md:pt-0 lg:items-center lg:justify-center">
-        <div className='flex flex-col md:flex-row lg:flex-col md:grow justify-center gap-[24px] lg:gap-10 md:justify-around lg:justify-center lg:flex-row lg:grow-0'>
-          <div className="flex flex-col justify-center gap-[15px] md:justify-start lg:flex-row lg:self-start lg:items-center lg:gap-[30px]">
+        <div className='flex flex-col md:flex-row md:grow justify-center gap-[24px] lg:gap-10 lg:justify-evenly lg:grow-0 lg:w-full'>
+          <div className="flex md:hidden lg:flex">
+            <p>
+              Cowards  Never Start <br />
+              The Weak Never Finish <br />
+              The Strong Never Quit <br />
+              Start YOUR jouney today!
+            </p>
+          </div>
+          <div className="flex flex-col justify-center gap-[15px] md:justify-start md:w-1/2 lg:w-auto lg:self-start lg:items-start lg:gap-[30px]">
             <p className="text-left font-bold my-1">
               Contact Us
             </p>
-            <div className="flex flex-col justify-center gap-[10px] md:gap-6 md:justify-start lg:flex-row">
+            <div className="flex flex-col justify-center gap-[10px] md:gap-6 md:justify-start">
               <div className="flex items-center gap-3 lg:gap-2">
                 <Image
                   src="/email.svg"
@@ -49,7 +65,7 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <a href={`mailto:${businessEmail}`} className="font-roboto text-sm lg:text-[14px] text-white">
+                <a href={`mailto:${businessEmail}`} className="text-sm lg:text-[14px] text-white">
                   {businessEmail}
                 </a>
               </div>
@@ -64,7 +80,7 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <p className="font-roboto text-sm lg:text-[14px]">
+                <p className="text-sm lg:text-[14px]">
                   {phoneNumber}
                 </p>
               </div>
@@ -79,13 +95,13 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <p className="font-roboto text-sm lg:text-[14px]">
+                <p className="text-sm lg:text-[14px]">
                   {location}
                 </p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center gap-[15px] lg:gap-[40px] md:justify-start lg:flex-row lg:self-start lg:items-center">
+          <div className="flex flex-col justify-center gap-[15px] lg:gap-[40px] md:w-1/2 lg:w-auto md:justify-start lg:self-start lg:items-start">
             <p className="text-left font-bold my-1">
               Follow Us
             </p>
@@ -95,6 +111,7 @@ export default function Footer({
                 alt="Facebook Icon"
                 width={30}
                 height={30}
+                className="cursor-pointer"
                 style={{
                   maxWidth: "100%",
                   height: "auto"
@@ -104,6 +121,7 @@ export default function Footer({
                 alt="Twitter Icon"
                 width={30}
                 height={30}
+                className="cursor-pointer"
                 style={{
                   maxWidth: "100%",
                   height: "auto"
@@ -113,11 +131,12 @@ export default function Footer({
                 alt="Instagram Icon"
                 width={30}
                 height={30}
+                className="cursor-pointer"
                 style={{
                   maxWidth: "100%",
                   height: "auto"
                 }} />
-              <Image
+              {/* <Image
                 src="/messenger.svg"
                 alt="Messenger Icon"
                 width={30}
@@ -134,15 +153,16 @@ export default function Footer({
                 style={{
                   maxWidth: "100%",
                   height: "auto"
-                }} />
+                }} /> */}
             </div>
-            <div className="hidden md:flex lg:hidden md:items-center md:self-stretch md:gap-[32px] md:flex-col md:justify-start">
+            <div className="hidden md:flex lg:hidden md:items-start md:self-stretch md:gap-[32px] md:flex-col md:justify-start">
               <div className='flex gap-8 justify-start'>
                 <Image
                   src="/facebook.svg"
                   alt="Facebook Icon"
                   width={30}
                   height={30}
+                  className="cursor-pointer"
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -152,6 +172,7 @@ export default function Footer({
                   alt="Twitter Icon"
                   width={30}
                   height={30}
+                  className="cursor-pointer"
                   style={{
                     maxWidth: "100%",
                     height: "auto"
@@ -161,12 +182,13 @@ export default function Footer({
                   alt="Instagram Icon"
                   width={30}
                   height={30}
+                  className="cursor-pointer"
                   style={{
                     maxWidth: "100%",
                     height: "auto"
                   }} />
               </div>
-              <div className='flex gap-8 justify-start'>
+              {/* <div className='flex gap-8 justify-start'>
                 <Image
                   src="/messenger.svg"
                   alt="Messenger Icon"
@@ -185,7 +207,7 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -207,14 +229,14 @@ export default function Footer({
               Site Map
             </Link>
           </div>
-          <div className="flex items-center justify-center pb-12">
+          <div className="flex items-center justify-center pb-2">
             <p className="font-roboto text-sm font-light text-white">
               © {copyrightYear} All Rights Reserved
             </p>
           </div>
         </div>
       </div>
-      <div className="hidden md:block md:flex md:flex-col md:gap-4">
+      <div className="hidden md:block md:flex md:flex-col md:gap-4 pt-10">
         <div className="flex gap-[10px] self-center justify-between w-[535px] font-roboto text-[12px]">
           <Link href="/privacy" className="block text-white">
             Cookie & Privacy Policy

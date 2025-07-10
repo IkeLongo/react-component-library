@@ -30,7 +30,7 @@ export default function ScrollToTopButton() {
   };
 
   return (
-    (<button className="absolute bottom-8 right-10" onClick={scrollToTop}>
+    (<button className="absolute bottom-8 right-10 cursor-pointer" onClick={scrollToTop}>
       <Image
         src="/footer-arrow-up.svg"
         alt="Arrow Up Icon"
