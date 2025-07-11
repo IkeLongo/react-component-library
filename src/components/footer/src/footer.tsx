@@ -19,7 +19,7 @@ export default function Footer({
 }: FooterProps) {
 
   return (
-    (<div className="relative w-full h-auto shrink-0 px-8 pb-1 md:py-10 md:pb-8 z-11 lg:pt-10">
+    (<div className="relative w-full h-auto shrink-0 px-8 pb-1 md:py-10 md:pb-8 z-11 bg-grey-700 lg:pt-10">
       <div className="flex w-full inline-flex justify-between items-center gap-[24px]">
         <Link href="/" passHref className="md:w-1/2 lg:w-full lg:flex lg:justify-center">
           <Image
