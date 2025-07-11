@@ -15,7 +15,7 @@ export default function Footer({
   phoneNumber = "(210) 730-6232",
   location = "San Antonio, Texas",
   logoSrc = "/logo-rivercity-creatives-horizontal-green-white.png",
-  copyrightYear = "2024"
+  copyrightYear = "2025"
 }: FooterProps) {
 
   return (
