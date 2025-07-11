@@ -29,7 +29,7 @@ export default function NavLinks({
           <p
             className={clsx(
               pathname === link.href
-                ? 'text-green-600 font-bold'
+                ? 'text-grey-500'
                 : 'font-medium hover:font-bold text-white md:text-navy-500'
             )}
           >
