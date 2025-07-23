@@ -30,8 +30,9 @@ export default function Footer({
             className="cursor-pointer w-[150px] lg:w-[200px] h-auto"
           />
         </Link>
+        {/* Tablet */}
         <div className="hidden md:block md:w-1/2 lg:hidden">
-          <p>
+          <p className="!text-[16px]">
             Cowards  Never Start <br />
             The Weak Never Finish <br />
             The Strong Never Quit <br />
@@ -41,8 +42,9 @@ export default function Footer({
       </div>
       <div className="flex flex-col gap-[46px] md:flex-row md:justify-between md:pb-10 md:pt-0 lg:items-center lg:justify-center">
         <div className='flex flex-col md:flex-row md:grow justify-center gap-[24px] lg:gap-10 lg:justify-evenly lg:grow-0 lg:w-full'>
+          {/* Mobile and Desktop */}
           <div className="flex md:hidden lg:flex">
-            <p>
+            <p className="!text-[16px]">
               Cowards  Never Start <br />
               The Weak Never Finish <br />
               The Strong Never Quit <br />
@@ -50,7 +52,7 @@ export default function Footer({
             </p>
           </div>
           <div className="flex flex-col justify-center gap-[15px] md:justify-start md:w-1/2 lg:w-auto lg:self-start lg:items-start lg:gap-[30px]">
-            <p className="text-left font-bold my-1">
+            <p className="text-left font-bold my-1 !text-[18px]">
               Contact Us
             </p>
             <div className="flex flex-col justify-center gap-[10px] md:gap-6 md:justify-start">
@@ -65,7 +67,7 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <a href={`mailto:${businessEmail}`} className="text-sm lg:text-[14px] text-white">
+                <a href={`mailto:${businessEmail}`} className="!text-[16px] lg:text-[14px] text-white">
                   {businessEmail}
                 </a>
               </div>
@@ -80,7 +82,7 @@ export default function Footer({
                     maxWidth: "100%",
                     height: "auto"
                   }} />
-                <p className="text-sm lg:text-[14px]">
+                <p className="!text-[16px] lg:text-[14px]">
                   {phoneNumber}
                 </p>
               </div>
@@ -96,10 +98,10 @@ export default function Footer({
                     height: "auto"
                   }} />
                 <div className='flex flex-col gap-1'>
-                  <p className="text-sm lg:text-[14px]">
+                  <p className="!text-[16px] lg:text-[14px]">
                     {location}
                   </p>
-                  <p className="text-sm lg:text-[14px]">
+                  <p className="!text-[16px] lg:text-[14px]">
                     (Located across Helotes Elementary)
                   </p>
                 </div>
@@ -107,7 +109,7 @@ export default function Footer({
             </div>
           </div>
           <div className="flex flex-col justify-center gap-[15px] lg:gap-[40px] md:w-1/2 lg:w-auto md:justify-start lg:self-start lg:items-start">
-            <p className="text-left font-bold my-1">
+            <p className="text-left font-bold my-1 !text-[18px]">
               Follow Us
             </p>
             <div className="flex items-center self-stretch gap-[32px] md:hidden lg:flex">
@@ -229,10 +231,10 @@ export default function Footer({
         </div>
         <div className="flex flex-col gap-4 md:hidden">
           <div className="font-roboto text-[12px] flex flex-col gap-[10px] self-stretch">
-            <Link href="/privacy" className="block text-white text-sm">
+            <Link href="/privacy" className="block text-white !text-[16px]">
               Cookie & Privacy Policy
             </Link>
-            <Link href="/terms" className="block text-white text-sm">
+            <Link href="/terms" className="block text-white !text-[16px]">
               Terms & Conditions
             </Link>
             {/* <Link href="/sales-and-refunds" className="block text-white">
@@ -241,12 +243,12 @@ export default function Footer({
             <Link href="/legal" className="block text-white">
               Legal
             </Link> */}
-            <Link href="/sitemap.xml" className="block text-white text-sm">
+            <Link href="/sitemap.xml" className="block text-white !text-[16px]">
               Site Map
             </Link>
           </div>
           <div className="flex items-center justify-center pb-2">
-            <p className="font-roboto text-sm font-light text-white">
+            <p className="font-roboto !text-[16px] font-light text-white">
               © {copyrightYear} All Rights Reserved
             </p>
           </div>
@@ -254,10 +256,10 @@ export default function Footer({
       </div>
       <div className="hidden md:block md:flex md:flex-col md:gap-4 pt-10">
         <div className="flex gap-[10px] self-center justify-between w-[535px] font-roboto text-[12px]">
-          <Link href="/privacy" className="block text-white">
+          <Link href="/privacy" className="block text-white !text-[16px]">
             Cookie & Privacy Policy
           </Link>
-          <Link href="/terms" className="block text-white">
+          <Link href="/terms" className="block text-white !text-[16px]">
             Terms & Conditions
           </Link>
           {/* <Link href="/sales-and-refunds" className="block text-white">
@@ -266,12 +268,12 @@ export default function Footer({
           <Link href="/legal" className="block text-white">
             Legal
           </Link> */}
-          <Link href="/sitemap.xml" className="block text-white">
+          <Link href="/sitemap.xml" className="block text-white !text-[16px]">
             Site Map
           </Link>
         </div>
         <div className="flex items-center justify-center">
-          <p className="font-roboto text-[11px] font-light text-white">
+          <p className="font-roboto !text-[14px] font-light text-white">
             © {copyrightYear} All Rights Reserved
           </p>
         </div>
